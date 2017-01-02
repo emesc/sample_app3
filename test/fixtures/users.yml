@@ -12,3 +12,13 @@ red:
   name: red
   email: red@example.com
   password_digest: <%= User.digest("foobar") %>
+
+green:
+  name: green
+  email: green@example.com
+  password_digest: <%= User.digest("foobar") %>
+
+blue:
+  name: blue
+  email: blue@example.com
+  password_digest: <%= User.digest("foobar") %>

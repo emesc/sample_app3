@@ -30,4 +30,9 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     assert_equal "Foo Bar", @user.name
     assert_equal "foo@bar.com", @user.email
   end
+
+  # test "successful edit with friendly forwarding" do
+  #   get
+  #   assert
+  # end
 end
