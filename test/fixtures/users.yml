@@ -13,35 +13,49 @@ red:
   email: red@example.com
   password_digest: <%= User.digest("foobar") %>
   admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 green:
   name: green
   email: green@example.com
   password_digest: <%= User.digest("foobar") %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 blue:
   name: blue
   email: blue@example.com
   password_digest: <%= User.digest("foobar") %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 orange:
   name: orange
   email: orange@example.com
   password_digest: <%= User.digest("foobar") %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 gray:
   name: gray
   email: gray@example.com
   password_digest: <%= User.digest("foobar") %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 purple:
   name: purple
   email: purple@example.com
   password_digest: <%= User.digest("foobar") %> 
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 <% 30.times do |n| %>
 user_<%= n %>:
   name: <%= "User #{n}" %>
   email: <%= "user-#{n}@example.com" %>
   password_digest: <%= User.digest("foobar") %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 <% end %>
