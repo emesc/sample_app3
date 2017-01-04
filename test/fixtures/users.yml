@@ -20,7 +20,7 @@ green:
   name: green
   email: green@example.com
   password_digest: <%= User.digest("foobar") %>
-  activated: true
+  activated: false
   activated_at: <%= Time.zone.now %>
 
 blue:
