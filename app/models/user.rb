@@ -58,6 +58,12 @@ class User < ActiveRecord::Base
     UserMailer.account_activation(self).deliver_now
   end
 
+  # defines a proto-feed
+  def feed
+    # Micropost.where("user_id: ?", id)
+    microposts
+  end
+
   private
 
     # converts email to all lower case
