@@ -15,6 +15,7 @@ class User < ActiveRecord::Base
   validates :password, presence: true,
                        length: { minimum: 6 },
                        allow_nil: true
+  has_many :microposts, dependent: :destroy
 
   # returns hash digest of given string; for users login test
   def User.digest(string)
@@ -55,6 +56,12 @@ class User < ActiveRecord::Base
 
   def send_activation_email
     UserMailer.account_activation(self).deliver_now
+  end
+
+  # defines a proto-feed
+  def feed
+    # Micropost.where("user_id: ?", id)
+    microposts
   end
 
   private
