@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   validates :password, presence: true,
                        length: { minimum: 6 },
                        allow_nil: true
-  has_many :microposts
+  has_many :microposts, dependent: :destroy
 
   # returns hash digest of given string; for users login test
   def User.digest(string)
